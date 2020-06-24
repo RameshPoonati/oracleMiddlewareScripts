@@ -1,0 +1,1 @@
+Description - This shell script zips and archives logs files. Choose archivePeriod variable value and cron job frequency based on your log volume. It is useful if you want to keep log files for future references. This script is developed for weblogic logs but can be customized for archiving any log file.

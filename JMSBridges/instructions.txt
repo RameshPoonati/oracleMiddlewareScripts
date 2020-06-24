@@ -1,0 +1,10 @@
+
+
+
+Action Plan:
+
+1) Check if there is planned downtime. If alert is due to an issue, create an incident.
+2) If JMS brigdes are inactive state, enable them from admin console.
+3) Check if servers are healthy. If not healthy, create ticket and take corrective action.
+3) Look for messages similar to in Admin server log: 'Bridge $BridgeName refused to obtain connections and transfer any messages, because it has been stopped or suspended, or is shutting down.' If this error exists, need further investigation. Issue can be caused by Active MQ connectivity, SOB server health etc.
+4) If alret repeats for more than 3 times in a day with no apparent signs of server health degradation, pass this information in night shift handover to check nightly job throughput from 6 PM itself and check bla bla bla bla.

@@ -1,0 +1,1 @@
+This Script Monitors JMS bridges and sends alert if any bridge is inactive.

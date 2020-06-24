@@ -1,0 +1,4 @@
+log.location=domian_home/servers/osb_server1/logs/
+server.log=osb_server1.log
+server.out=osb_server1.out
+server.diag=osb_server1-diagnostic
