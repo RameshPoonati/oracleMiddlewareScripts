@@ -1,0 +1,11 @@
+username=weblogic
+
+password=
+
+host=
+
+server.names=osb_server1,wsm_server1
+
+#cluster.names=osb_cluster,wsm_cluster
+
+#secondNodeIP=

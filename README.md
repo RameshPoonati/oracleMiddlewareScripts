@@ -1,0 +1,1 @@
+This repository contins wlst and shell scripts to monitor and manage weblogic, soa suite, oracle service bus, ODI applications.
