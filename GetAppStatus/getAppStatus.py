@@ -49,8 +49,7 @@ def getAppStatus(): #
 def sendMail():
 
 	sender = 'aosbpre@cem4sosbapre01'
-	receivers = ['ramesh.poonati@specsavers.com' ]
-
+	receivers = [''] # Replace with recipients
 	message = """From: """ +  sender + """ \n MIME-Version: 1.0 \n Content-type: text/html \nSubject: Alert: Action Required - """ + env + """ - JMS Proxy MDBs in ADMIN State  \n"""
 	mailFile = open(mailLocation,'r')
 	message = message + mailFile.read() 

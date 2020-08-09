@@ -141,10 +141,9 @@ def sendMail():
 
 	#print >> mailFile, "\nAction Plan:";
 	#print >> mailFile, "\n1. If consumer count is zero: Inform JDA team that there are no active consumer on the respective JMS.";
-	sender = 'aosbprd@cem4sosbaprd01'
-        receivers = ['GlobalSSMW@specsavers.com', 'GlobalSSAMS@specsavers.com']
-        #receivers = ['ramesh.poonati@specsavers.com']
-	#receivers = ['GlobalSSMW@specsavers.com'] 
+	sender = ''
+    receivers = [''] # add recipients
+     
 	message = """From: """ +  sender + """ \n MIME-Version: 1.0 \n Content-type: text/html \nSubject: Alert: Action Required - """ + env + """ - JMS Monitoring \n"""
 	mailFile = open(mailLocation,'r')
 	message = message + mailFile.read() 
