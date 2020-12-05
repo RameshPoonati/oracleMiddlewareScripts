@@ -1,0 +1,1 @@
+Description: This shell script takes thread dump for the all weblogic servers running on the machine. User can choose for what servers thread dumps have to be taken.
