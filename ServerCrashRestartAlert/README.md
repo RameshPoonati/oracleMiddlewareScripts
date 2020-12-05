@@ -1,4 +1,4 @@
-Description: This script identifies if the server is restarted during past x mins. This will be useful when server is crashing and auto restarted by node manager or when we want to have more control over restarts.It was tested on 12.1.3.0. May need minor changes on higher versions.
+Description: This script identifies if the weblogic/soa/osb/odi etc server is restarted during past x mins. This will be useful when server is crashing and auto restarted by node manager or when we want to have more control over restarts.It was tested on 12.1.3.0. May need minor changes on higher versions.
 
 crashRestartAlert.py - wlst script which reads through server runtime to get if it was restarted recently.
 
