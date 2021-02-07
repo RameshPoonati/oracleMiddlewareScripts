@@ -1,9 +1,8 @@
 #!/bin/bash
-export WL_HOME=/orabpm/app/oracle/middleware/wlserver
-export JAVA_HOME=/orabpm/app/oracle/jdk1.8.0_60
+source /home/oracle/scripts/soaprd.env 
 export PATH=$JAVA_HOME/bin:$PATH
-export SCRIPT_HOME=/orabpm/app/scripts/dataSourceMonitoring
-source $WL_HOME/server/bin/setWLSEnv.sh
+export SCRIPT_HOME=/home/oracle/scripts/dataSourceMonitoring
+source $WLS_HOME/server/bin/setWLSEnv.sh
 
 timestamp=$(date +%Y-%m-%d-%H-%M)
 java weblogic.WLST $SCRIPT_HOME/dsAlert.py
