@@ -1,0 +1,1 @@
+Description - This shell script extract weblogic logs (diagnostic, server.log, server.out and Oracle http server logs) based on input time period.
