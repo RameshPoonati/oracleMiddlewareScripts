@@ -6,7 +6,7 @@
 #
 #=============================================================================================
 
-ENV=TEST50
+ENV=QA
 SCRIPT_HOME=/home/oracle/scripts/ErrorReport
 LOGS_DIR=$SCRIPT_HOME/logs
 timestamp=$(date +%Y-%m-%d-%H-%M)
@@ -43,9 +43,9 @@ logCount=`cat $LOGS_DIR/log.txt | wc -l`
 
 if [ $logCount -gt 0 ]
 then
-	#echo "TO:rpoonati@vmware.com shaws@vmware.com rchennam@vmware.com mboya@vmware.com"  > $LOGS_DIR/mail.txt
-	echo "TO:rpoonati@vmware.com "  > $LOGS_DIR/mail.txt
-        echo "Subject: $ENV - SOA: Error Report" >>  $LOGS_DIR/mail.txt
+	
+	echo "TO:ramesh@sharespoint.com "  > $LOGS_DIR/mail.txt
+    echo "Subject: $ENV - SOA: Error Report" >>  $LOGS_DIR/mail.txt
 
 	echo -n "Time: " > $LOGS_DIR/mailBody.txt
 	echo "$(date +%Y-%m-%d-%H-%M)" >> $LOGS_DIR/mailBody.txt
