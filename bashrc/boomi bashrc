@@ -1,0 +1,39 @@
+#Directory Navigation
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+#List in reverse chronolgical order
+alias l="ls -ltrh"
+alias la="ls -la"
+alias lhead="ls -ltrh | head"
+alias ltail="ls -ltrh | tail"
+
+# List only directories
+alias ld="ls -ltrh | grep --color=never '^d'"
+
+alias dutop='du -sh * | sort -rh | head -25'
+
+#History
+export HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE=10000
+export HISTFILESIZE=$HISTSIZE
+alias h='history'
+alias hgrep='history | grep'
+
+#Map up and down arrows to search history
+bind '"\e[B":history-search-forward'
+bind '"\e[A":history-search-backward'
+
+alias vi=vim
+alias ports='netstat -tulnp' #All listen ports
+
+#Application Specific
+export molecule_home=/data/boomi/Boomi_AtomSphere/Molecule/Molecule_boomi_dev_etl_molecule
+alias home='cd $molecule_home'
+alias bin='cd $molecule_home/bin'
+alias config='cd $molecule_home/conf'
+alias logs='cd $molecule_home/logs'
+alias status='$molecule_home/bin/atom status'
