@@ -1,5 +1,5 @@
 #!/bin/bash
-source /home/oracle/scripts/soaprd.env 
+source /home/oracle/scripts/soadev12.env 
 export PATH=$JAVA_HOME/bin:$PATH
 export SCRIPT_HOME=/home/oracle/scripts/dataSourceMonitoring
 source $WLS_HOME/server/bin/setWLSEnv.sh
@@ -10,4 +10,3 @@ java weblogic.WLST $SCRIPT_HOME/dsAlert.py
 mv $SCRIPT_HOME/logs/log.txt $SCRIPT_HOME/logs/dsAlert_$timestamp.log
 
 find $SCRIPT_HOME/logs/dsAlert_* -mtime +30 -exec rm {} \;
-
