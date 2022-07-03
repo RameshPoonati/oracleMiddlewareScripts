@@ -1,6 +1,0 @@
-rmq2.infra-dev.abc.com,node2,/rabbitmq/rabbitmq_log/rmq2
-rmq3.infra-dev.abc.com,node3,/rabbitmq/rabbitmq_log/rmq3
-rmq4.infra-dev.abc.com,node4,/rabbitmq/rabbitmq_log/rmq4
-rmq5.infra-dev.abc.com,node5,/rabbitmq/rabbitmq_log/rmq5
-rmq6.infra-dev.abc.com,node6,/rabbitmq/rabbitmq_log/rmq6
-rmq7.infra-dev.abc.com,node7,/rabbitmq/rabbitmq_log/rmq7
