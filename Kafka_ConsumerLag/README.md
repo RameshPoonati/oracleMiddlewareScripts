@@ -1,0 +1,1 @@
+Description - This bash script checks consumer group lag in Kafka and sends mail based on threshold defined in the script. It can be configured to send data to time series database like wavefront.
