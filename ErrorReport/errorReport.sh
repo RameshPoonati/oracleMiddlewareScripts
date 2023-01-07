@@ -17,6 +17,7 @@ ohsPrintName=ohs1 #Print name is used for easier understanding in mails. Instanc
 WL_LOG_DIR=/oracle/config/mserver/domains/soa_domain/servers/$serverInstance/logs
 OHS_LOG_DIR=/oracle/config/mserver/domains/soa_domain/servers/$ohsInstance/logs
 
+#This script can be converted to daily report by removing Hour from below varialbes.
 diagTime=`date -d '1 hour ago' "+%Y-%m-%dT%H"`
 outTime=`date -d '1 hour ago' "+%Y-%m-%d %H"`
 srvLogTime=`date -d '1 hour ago' "+%b %d, %Y %-H"`
