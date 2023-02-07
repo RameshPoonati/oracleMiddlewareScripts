@@ -1,0 +1,2426 @@
+{
+  "name": "TEST - OSB",
+  "url": "TEST-OSB",
+  "eventFilterType": "NONE",
+  "displayDescription": false,
+  "displaySectionTableOfContents": true,
+  "displayQueryParameters": true,
+  "sections": [
+    {
+      "name": "Overview",
+      "id": "untitled-dashboard-section-1",
+      "rows": [
+        {
+          "charts": [
+            {
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "sparklineDisplayFontSize": "200",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "sparklineValueColorMapApplyTo": "TEXT",
+                "windowing": "full",
+                "sparklineSize": "BACKGROUND",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "sparklineDisplayValueType": "VALUE",
+                "type": "sparkline",
+                "y1UnitAutoscaling": false,
+                "sparklineValueTextMapText": [
+                  "new highest"
+                ],
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "sparklineDisplayHorizontalPosition": "MIDDLE",
+                "sparklineDecimalPrecision": 0,
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "includeObsoleteMetrics": false,
+              "name": "Total Servers",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "singleStat": {
+                  "sparklineDisplayLabel": "A",
+                  "sparklineDisplaySubLabel": "Total Servers"
+                },
+                "dashboardLayout": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                },
+                "y0ScaleDecimal": false
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "3",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "sparklineDisplayFontSize": "200",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "sparklineValueColorMapColors": [
+                  "rgba(245,102,0,1)",
+                  "rgba(87,170,19,1)"
+                ],
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "sparklineValueColorMapApplyTo": "BACKGROUND",
+                "windowing": "full",
+                "sparklineSize": "BACKGROUND",
+                "fixedLegendFilterSort": "TOP",
+                "sparklineValueColorMapValuesV2": [
+                  3
+                ],
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "sparklineDisplayValueType": "VALUE",
+                "type": "sparkline",
+                "y1UnitAutoscaling": false,
+                "sparklineValueTextMapText": [
+                  "new highest"
+                ],
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "sparklineDisplayHorizontalPosition": "MIDDLE",
+                "sparklineDecimalPrecision": 0,
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "New Chart",
+              "anomalySampleSize": "8",
+              "units": "",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "singleStat": {
+                  "sparklineDisplayLabel": "A",
+                  "sparklineDisplaySubLabel": "Available Servers"
+                },
+                "dashboardLayout": {
+                  "x": 3,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                },
+                "y0ScaleDecimal": false
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "count(ts(nonprod.weblogic.ServerRuntime.OverallHealthState.OverallHealthState.state, source=${source}))",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "fixedLegendEnabled": true,
+                "fixedLegendFilterField": "CURRENT",
+                "fixedLegendShowSourceName": false,
+                "invertDynamicLegendHoverControl": false,
+                "fixedLegendFilterSort": "TOP",
+                "fixedLegendShowMetricName": false,
+                "type": "pie",
+                "fixedLegendUseRawStats": true,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Server Health",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "pie": {
+                  "type": "pie",
+                  "ratio": 60,
+                  "showPercentage": false,
+                  "percentagePrecision": 0
+                },
+                "decimalPrecision": 0,
+                "dashboardLayout": {
+                  "x": 6,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "Healthy Servers",
+                  "query": "count(lowpass(1,ts(nonprod.weblogic.ServerRuntime.OverallHealthState.OverallHealthState.state, source=${source})))",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "Unhealthy Servers",
+                  "query": "count(highpass(0,ts(nonprod.weblogic.ServerRuntime.OverallHealthState.OverallHealthState.state, source=${source})))",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "description": "Server Health",
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": true,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "sparklineDisplayFontSize": "100",
+                "stackType": "zero",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": false,
+                "showValueColumn": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "showRawValues": false,
+                "lineType": "linear",
+                "showHosts": true,
+                "sparklineValueColorMapApplyTo": "TEXT",
+                "groupBySource": false,
+                "windowing": "full",
+                "sparklineSize": "BACKGROUND",
+                "invertDynamicLegendHoverControl": false,
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "sortValuesDescending": true,
+                "fixedLegendShowMetricName": false,
+                "sparklineDisplayValueType": "VALUE",
+                "type": "pie",
+                "y1UnitAutoscaling": false,
+                "showLabels": true,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "sparklineDisplayHorizontalPosition": "MIDDLE",
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Deployments Health",
+              "anomalySampleSize": "8",
+              "units": "",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "pie": {
+                  "ratio": 60,
+                  "showPercentage": false,
+                  "type": "pie"
+                },
+                "decimalPrecision": 0,
+                "lineFill": 1,
+                "singleStat": {
+                  "sparklineDisplayLabel": "A",
+                  "sparklineDisplaySubLabel": "New Chart"
+                },
+                "dashboardLayout": {
+                  "x": 9,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                },
+                "y0ScaleDecimal": false
+              },
+              "sources": [
+                {
+                  "name": "Healthy",
+                  "query": "count(lowpass(1,ts(\"nonprod.weblogic.ApplicationRuntime.HealthState.HealthState.state\",source=${source})))",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "Unhealthy",
+                  "query": "count(highpass(0,ts(\"nonprod.weblogic.ApplicationRuntime.HealthState.HealthState.state\",source=${source})))",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            }
+          ],
+          "heightFactor": 80
+        }
+      ],
+      "sectionFilter": null
+    },
+    {
+      "name": "Operating System",
+      "id": "fizx2",
+      "rows": [
+        {
+          "charts": [
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "COUNT",
+                "y0ScaleSIBy1024": false,
+                "sparklineDisplayFontSize": "100",
+                "stackType": "zero",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "showValueColumn": true,
+                "fixedLegendPosition": "TOP",
+                "customTags": [],
+                "lineType": "linear",
+                "sparklineValueColorMapApplyTo": "TEXT",
+                "windowing": "full",
+                "sparklineSize": "BACKGROUND",
+                "fixedLegendFilterSort": "BOTTOM",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "sparklineDisplayValueType": "VALUE",
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": true,
+                "fixedLegendDisplayStats": [],
+                "sparklineDisplayHorizontalPosition": "MIDDLE",
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "System CPU Load",
+              "anomalySampleSize": "8",
+              "units": " ",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3,
+                  "h": 3
+                }
+              },
+              "sources": [
+                {
+                  "name": "cpuload",
+                  "query": "ts(nonprod.weblogic.OperatingSystem.SystemCpuLoad, source=${source} and jolokia_agent_url=\"*8011*\")",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": true,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "COUNT",
+                "y0ScaleSIBy1024": false,
+                "sparklineDisplayFontSize": "100",
+                "stackType": "zero",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "showValueColumn": true,
+                "fixedLegendPosition": "TOP",
+                "customTags": [],
+                "lineType": "linear",
+                "sparklineValueColorMapApplyTo": "TEXT",
+                "windowing": "full",
+                "sparklineSize": "BACKGROUND",
+                "fixedLegendFilterSort": "BOTTOM",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "sparklineDisplayValueType": "VALUE",
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": true,
+                "fixedLegendDisplayStats": [],
+                "sparklineDisplayHorizontalPosition": "MIDDLE",
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Process CPU Load",
+              "anomalySampleSize": "8",
+              "units": " ",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 3,
+                  "y": 0,
+                  "w": 2,
+                  "h": 3
+                }
+              },
+              "sources": [
+                {
+                  "name": "cpuload",
+                  "query": "ts(\"nonprod.weblogic.OperatingSystem.ProcessCpuLoad\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": true,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "COUNT",
+                "y0ScaleSIBy1024": false,
+                "sparklineDisplayFontSize": "100",
+                "stackType": "zero",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "showValueColumn": true,
+                "fixedLegendPosition": "TOP",
+                "customTags": [],
+                "lineType": "linear",
+                "sparklineValueColorMapApplyTo": "TEXT",
+                "windowing": "full",
+                "sparklineSize": "BACKGROUND",
+                "fixedLegendFilterSort": "BOTTOM",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "sparklineDisplayValueType": "VALUE",
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": true,
+                "fixedLegendDisplayStats": [],
+                "sparklineDisplayHorizontalPosition": "MIDDLE",
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "System Load Average",
+              "anomalySampleSize": "8",
+              "units": " ",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 5,
+                  "y": 0,
+                  "w": 3,
+                  "h": 3
+                }
+              },
+              "sources": [
+                {
+                  "name": "cpuload",
+                  "query": "ts(\"nonprod.weblogic.OperatingSystem.SystemLoadAverage\", source=${source} and jolokia_agent_url=\"*8011*\")",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": true,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "COUNT",
+                "y0ScaleSIBy1024": false,
+                "sparklineDisplayFontSize": "100",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "showValueColumn": true,
+                "fixedLegendPosition": "TOP",
+                "customTags": [],
+                "lineType": "linear",
+                "sparklineValueColorMapApplyTo": "TEXT",
+                "windowing": "full",
+                "sparklineSize": "NONE",
+                "fixedLegendFilterSort": "BOTTOM",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "sparklineDisplayValueType": "VALUE",
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "sparklineValueTextMapText": [
+                  "new highest"
+                ],
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": true,
+                "fixedLegendDisplayStats": [],
+                "sparklineDisplayHorizontalPosition": "MIDDLE",
+                "sparklineDecimalPrecision": 0,
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Open File Descriptors",
+              "anomalySampleSize": "8",
+              "units": " ",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "singleStat": {
+                  "sparklineDisplayLabel": "cpuload",
+                  "sparklineDisplaySubLabel": "Open File Descriptors"
+                },
+                "dashboardLayout": {
+                  "x": 8,
+                  "y": 0,
+                  "w": 2,
+                  "h": 3
+                },
+                "y0ScaleDecimal": false
+              },
+              "sources": [
+                {
+                  "name": "FD",
+                  "query": "ts(nonprod.weblogic.OperatingSystem.OpenFileDescriptorCount, source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "MaxFD",
+                  "query": "ts(nonprod.weblogic.OperatingSystem.MaxFileDescriptorCount, source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": true,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "stackType": "zero",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Physical Memory",
+              "anomalySampleSize": "8",
+              "units": "",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "decimalPrecision": 0,
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 10,
+                  "y": 0,
+                  "w": 2,
+                  "h": 3
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(nonprod.weblogic.OperatingSystem.FreePhysicalMemorySize , source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            }
+          ],
+          "heightFactor": 50
+        }
+      ],
+      "sectionFilter": null
+    },
+    {
+      "name": "JVM",
+      "id": "sSsCJ",
+      "rows": [
+        {
+          "charts": [
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "sortValuesDescending": true,
+                "fixedLegendShowMetricName": false,
+                "type": "top-k",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": true,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Uptime",
+              "anomalySampleSize": "8",
+              "units": "ms",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "topK": {
+                  "labelBy": [
+                    "jolokia_agent_url"
+                  ]
+                },
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(nonprod.weblogic.jvm.runtime.Uptime, source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "stackType": "zero",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "showValueColumn": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Heap Memory Usage",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 3,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "used",
+                  "query": "ts(nonprod.weblogic.jvm.memory.HeapMemoryUsage.used, source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "max",
+                  "query": "ts(nonprod.weblogic.jvm.memory.HeapMemoryUsage.max, source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "stackType": "zero",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "showValueColumn": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Non Heap Memory Usage",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 5,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "memory",
+                  "query": "ts(nonprod.weblogic.jvm.memory.NonHeapMemoryUsage.used, source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "showValueColumn": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Threading",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 8,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "threading",
+                  "query": "ts(nonprod.weblogic.jvm.threading.ThreadCount, source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "showValueColumn": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "ClassLoading",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 10,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "classloading",
+                  "query": "ts(nonprod.weblogic.jvm.classloading.TotalLoadedClassCount, source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            }
+          ],
+          "heightFactor": 80
+        }
+      ],
+      "sectionFilter": null
+    },
+    {
+      "name": "Weblogic Thread Pool",
+      "id": "kZYYv",
+      "rows": [
+        {
+          "charts": [
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Pending Queue Length",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.ThreadPoolRuntime.QueueLength\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Execute Thread Count",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 3,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.ThreadPoolRuntime.ExecuteThreadTotalCount\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Stuck Thread Count",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 5,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.ThreadPoolRuntime.StuckThreadCount\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Hogging Thread Count",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "decimalPrecision": 0,
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 8,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.ThreadPoolRuntime.HoggingThreadCount\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "includeObsoleteMetrics": false,
+              "name": "Work Manager - Pending Requests",
+              "units": "Units",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 10,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.WorkManagerRuntime.PendingRequests\",source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false
+            }
+          ],
+          "heightFactor": 80
+        }
+      ],
+      "sectionFilter": null
+    },
+    {
+      "name": "Weblogic JDBC",
+      "id": "55Z39",
+      "rows": [
+        {
+          "charts": [
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": true,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "sparklineDisplayFontSize": "100",
+                "stackType": "zero",
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": false,
+                "showValueColumn": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "showRawValues": false,
+                "lineType": "linear",
+                "showHosts": true,
+                "sparklineValueColorMapApplyTo": "TEXT",
+                "groupBySource": false,
+                "windowing": "full",
+                "sparklineSize": "BACKGROUND",
+                "invertDynamicLegendHoverControl": false,
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "sortValuesDescending": true,
+                "fixedLegendShowMetricName": false,
+                "sparklineDisplayValueType": "VALUE",
+                "type": "pie",
+                "y1UnitAutoscaling": false,
+                "showLabels": true,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "sparklineDisplayHorizontalPosition": "MIDDLE",
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Datasource Health",
+              "anomalySampleSize": "8",
+              "units": "",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "pie": {
+                  "ratio": 60,
+                  "showPercentage": false,
+                  "type": "pie"
+                },
+                "decimalPrecision": 0,
+                "lineFill": 1,
+                "singleStat": {
+                  "sparklineDisplayLabel": "A",
+                  "sparklineDisplaySubLabel": "New Chart"
+                },
+                "dashboardLayout": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                },
+                "y0ScaleDecimal": false
+              },
+              "sources": [
+                {
+                  "name": "Healthy",
+                  "query": "count(lowpass(1,ts(\"nonprod.weblogic.JDBCDataSourceRuntime.State\",source=${source})))",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "Unhealthy",
+                  "query": "count(highpass(0,ts(\"nonprod.weblogic.JDBCDataSourceRuntime.State\",source=${source})))",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Datasource Utilization",
+              "anomalySampleSize": "8",
+              "units": "Percentage",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 3,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(nonprod.weblogic.JDBCDataSourceRuntime.CurrCapacity, source=${source}) * 100/avg(ts(\"nonprod.weblogic.JDBCConfig.MaxCapacity.MaxCapacity\", source=${source}))",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Datasource - Active Connections",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 6,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(nonprod.weblogic.JDBCDataSourceRuntime.ActiveConnectionsCurrentCount, source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Datasource - Leaked Connections",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 8,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(nonprod.weblogic.JDBCDataSourceRuntime.LeakedConnectionCount, source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Datasource - Failed Reserve",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 10,
+                  "y": 0,
+                  "w": 2,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(nonprod.weblogic.JDBCDataSourceRuntime.FailedReserveRequestCount, source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            }
+          ],
+          "heightFactor": 80
+        }
+      ],
+      "sectionFilter": null
+    },
+    {
+      "name": "Weblogic JMS",
+      "id": "1kHKe",
+      "rows": [
+        {
+          "charts": [
+            {
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "includeObsoleteMetrics": false,
+              "name": "JMS Servers Count",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 4,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.JMSRuntime.JMSServersCurrentCount\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false
+            },
+            {
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "includeObsoleteMetrics": false,
+              "name": "JMS Connections Count",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 4,
+                  "y": 0,
+                  "w": 4,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.JMSRuntime.ConnectionsCurrentCount\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false
+            },
+            {
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "includeObsoleteMetrics": false,
+              "name": "JMS Messages Count",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 8,
+                  "y": 0,
+                  "w": 4,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.JMSDestinationRuntime.Messages*\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false
+            }
+          ],
+          "heightFactor": 80
+        }
+      ],
+      "sectionFilter": null
+    },
+    {
+      "name": "Weblogic Misc",
+      "id": "oX8VH",
+      "rows": [
+        {
+          "charts": [
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Persistent Store Health",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "decimalPrecision": 0,
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 4,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "ts(\"nonprod.weblogic.PersistentStoreRuntime.HealthState.HealthState.state\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "description": "0 - Healthy",
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "JTA Transactions",
+              "anomalySampleSize": "8",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 4,
+                  "y": 0,
+                  "w": 4,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "mdiff(10m, ts(\"nonprod.weblogic.JTARuntime.TransactionTotalCount\", source=${source}))",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "B",
+                  "query": "mdiff(10m, ts(\"nonprod.weblogic.JTARuntime.TransactionCommittedTotalCount\", source=${source}))",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "C",
+                  "query": "mdiff(10m, ts(\"nonprod.weblogic.JTARuntime.TransactionRolledBackTotalCount\", source=${source}))",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "D",
+                  "query": "mdiff(10m, ts(\"nonprod.weblogic.JTARuntime.TransactionAbandonedTotalCount\", source=${source}))",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "JTA Transactions Failure Rate",
+              "anomalySampleSize": "8",
+              "units": "Percentage",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 8,
+                  "y": 0,
+                  "w": 4,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "A",
+                  "query": "mdiff(10m, ts(\"nonprod.weblogic.JTARuntime.TransactionRolledBackTotalCount\", source=${source}) + ts(\"nonprod.weblogic.JTARuntime.TransactionAbandonedTotalCount\", (source=${source})))/ mdiff(10m, ts(\"nonprod.weblogic.JTARuntime.TransactionTotalCount\", source=${source})) * 100",
+                  "querybuilderEnabled": false,
+                  "sourceDescription": "",
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            }
+          ],
+          "heightFactor": 80
+        }
+      ],
+      "sectionFilter": null
+    },
+    {
+      "name": "OSB",
+      "id": "B4CtG",
+      "rows": [
+        {
+          "charts": [
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Proxy Service - Response Time",
+              "anomalySampleSize": "8",
+              "units": "",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 0,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "Response Time",
+                  "query": "ts(\"nonprod.weblogic.OSB.PS.response-time\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "Count",
+                  "query": "ts(\"nonprod.weblogic.OSB.PS.message-count\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Proxy Service - Failure Rate",
+              "anomalySampleSize": "8",
+              "units": "",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 3,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "Failure Rate",
+                  "query": "ts(\"nonprod.weblogic.OSB.PS.failure-rate\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "Count",
+                  "query": "ts(\"nonprod.weblogic.OSB.PS.message-count\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Business Service - Response Time",
+              "anomalySampleSize": "8",
+              "units": "",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 6,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "Response Time",
+                  "query": "ts(\"nonprod.weblogic.OSB.BS.response-time\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "Count",
+                  "query": "ts(\"nonprod.weblogic.OSB.BS.message-count\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            },
+            {
+              "anomalySeverity": "medium",
+              "anomalyDetectionOn": false,
+              "chartSettings": {
+                "y1ScaleSIBy1024": false,
+                "fixedLegendEnabled": false,
+                "fixedLegendFilterField": "CURRENT",
+                "y0ScaleSIBy1024": false,
+                "fixedLegendFilterLimit": 5,
+                "fixedLegendShowSourceName": true,
+                "fixedLegendPosition": "RIGHT",
+                "customTags": [],
+                "lineType": "linear",
+                "windowing": "full",
+                "fixedLegendFilterSort": "TOP",
+                "y1Units": "",
+                "fixedLegendShowMetricName": false,
+                "type": "line",
+                "y1UnitAutoscaling": false,
+                "tagMode": "all",
+                "fixedLegendUseRawStats": false,
+                "y0UnitAutoscaling": false,
+                "fixedLegendDisplayStats": [
+                  "CURRENT"
+                ],
+                "autoColumnTags": false,
+                "numTags": 4,
+                "defaultSortColumn": null,
+                "sparklineDisplayColor": null,
+                "sparklineLineColor": null,
+                "sparklineFillColor": null
+              },
+              "displayConfidenceBounds": false,
+              "includeObsoleteMetrics": false,
+              "filterOutNonAnomalies": false,
+              "name": "Business Service - Failure Rate",
+              "anomalySampleSize": "8",
+              "units": "",
+              "summarization": "MEAN",
+              "base": 0,
+              "chartAttributes": {
+                "lineFill": 1,
+                "dashboardLayout": {
+                  "x": 9,
+                  "y": 0,
+                  "w": 3,
+                  "h": 4
+                }
+              },
+              "sources": [
+                {
+                  "name": "Failure Rate",
+                  "query": "ts(\"nonprod.weblogic.OSB.BS.failure-rate\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                },
+                {
+                  "name": "Count",
+                  "query": "ts(\"nonprod.weblogic.OSB.BS.message-count\", source=${source})",
+                  "querybuilderEnabled": false,
+                  "disabled": false,
+                  "secondaryAxis": false,
+                  "queryType": "WQL"
+                }
+              ],
+              "noDefaultEvents": false,
+              "anomalyType": "both"
+            }
+          ],
+          "heightFactor": 80
+        }
+      ],
+      "sectionFilter": null
+    }
+  ],
+  "parameterDetails": {
+    "source": {
+      "tagsBlackListRegex": "",
+      "parameterType": "DYNAMIC",
+      "tagKey": "",
+      "queryValue": "ts(nonprod.weblogic.ServerRuntime.OverallHealthState.OverallHealthState.state)",
+      "order": 1,
+      "defaultValue": "Label_4",
+      "hideFromView": false,
+      "value": "oraosb-test12-w1",
+      "label": "source",
+      "dynamicFieldType": "SOURCE",
+      "valuesToReadableStrings": {
+        "Label_2": "osb-dev-w1",
+        "Label_3": "osb-test-w1",
+        "Label": "*"
+      },
+      "allowAll": true,
+      "selectedLabel": "Label_4"
+    }
+  }
+}
