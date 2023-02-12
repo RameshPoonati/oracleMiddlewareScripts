@@ -9,7 +9,10 @@
 <b>Sample Dashboards: </b>
 
 <b>System, JVM and Thread Pool Metrics: </b>
+![Alt text](images/image1.jpg?raw=true "Sample 1")
 
 <b>Datasource, JMS and SOA Metrics: </b>
+![Alt text](images/image2.jpg?raw=true "Sample 2")
 
 <b>OSB Metrics: </b>
+![Alt text](images/image3.jpg?raw=true "Sample 3")
