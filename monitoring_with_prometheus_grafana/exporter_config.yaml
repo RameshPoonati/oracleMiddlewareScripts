@@ -1,0 +1,59 @@
+metricsNameSnakeCase: true
+queries:
+
+- JVMRuntime:
+    key: name
+    keyName: weblogic_serverName
+    prefix: wls_jvm_
+    values: [heapFreeCurrent, heapFreePercent, heapSizeCurrent, heapSizeMax, uptime, processCpuLoad]     
+
+- key: name
+  keyName: weblogic_serverName
+  prefix: wls_server_
+  JTARuntime:
+    prefix: wls_jta_
+    key: type
+  threadPoolRuntime:
+    prefix: wls_threadpool_
+    key: name
+    values: [executeThreadTotalCount, queueLength, stuckThreadCount, hoggingThreadCount, pendingUserRequestCount]
+    
+  JDBCServiceRuntime:
+    JDBCDataSourceRuntimeMBeans:
+      prefix: wls_datasource_
+      key: name
+      
+  persistentStoreRuntimes:
+    prefix: wls_persistentstore_
+    key: name
+    
+  workManagerRuntimes:
+    prefix: wls_workmanager_
+    key: name
+    values: [stuckThreadCount, pendingRequests, completedRequests]
+    
+  JMSRuntime:
+    key: name
+    keyName: jmsruntime
+    prefix: wls_jmsruntime_
+    JMSServers:
+      prefix: wls_jms_
+      key: name
+      keyName: jmsserver
+      destinations:
+        prefix: wls_jms_dest_
+        key: name
+        keyName: destination
+        
+  applicationRuntimes:
+    key: name
+    keyName: app    
+    componentRuntimes:
+      type: WebAppComponentRuntime
+      prefix: webapp_config_
+      key: name
+      values: [deploymentState, contextRoot, sourceInfo, openSessionsHighCount, openSessionsCurrentCount, sessionsOpenedTotalCount, sessionCookieMaxAgeSecs, sessionInvalidationIntervalSecs, sessionTimeoutSecs, singleThreadedServletPoolSize, sessionIDLength, servletReloadCheckSecs, jSPPageCheckSecs]
+      servlets:
+        prefix: wls_servlet_
+        key: servletName
+        values: [invocationTotalCount, reloadTotal, executionTimeAverage, poolMaxCapacity, executionTimeTotal, reloadTotalCount, executionTimeHigh, executionTimeLow]
